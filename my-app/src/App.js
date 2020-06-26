@@ -14,11 +14,34 @@ class App extends React.Component {
     this.state = {
       Q: counter
     };
+
   }
 
+
+
+  componentWillMount() {
+    console.log("will mount!!");
+  }
+  
   componentDidMount() {
     this.Q = setInterval( () => this.update(), 1000);
   }
+
+
+
+  componentWillReceiveProps() {
+    console.log("props!!");
+  }
+
+  componentWillUpdate() {
+    console.log("will update!!!");
+  }
+
+  componentDidUpdate() {
+    console.log("updated!!");
+  }
+
+
 
 
   update() {
@@ -31,11 +54,13 @@ class App extends React.Component {
     return (
       <div>
         <h1>This is homework for Session 2!</h1>
-        <h2>Counter: {this.state.Q}.</h2>
+        <h1>Counting by 2s: {this.state.Q}.</h1>
       </div>
     );
   }
 }
+
+
 
 ReactDOM.render(
   <App />,
