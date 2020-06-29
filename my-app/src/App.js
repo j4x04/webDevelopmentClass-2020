@@ -15,6 +15,7 @@ class App extends React.Component {
       Q: counter
     };
 
+
   }
 
 
@@ -52,9 +53,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>This is homework for Session 2!</h1>
-        <h1>Counting by 2s: {this.state.Q}.</h1>
+      <div class = "general">
+
+      
+        <div class = "title">
+          <h1>Leo Zhang</h1>
+          <div class = "description">
+            <p class = "top">16 years old</p>
+            <p>Grade 11</p>
+            <p>Attending Upper Canada College</p>
+            <p class = "bottom">Toronto, Canada</p>
+          </div>
+        </div>
+
+      
+
+
       </div>
     );
   }
