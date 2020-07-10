@@ -5,7 +5,7 @@ import Agestatement from './Agestatement.js';
 
 let counter = 0; 
 let ageString = "";
-function agecalculations() {
+function agecalculations()  {
   let q = new Date(); // new date object
   var temp = 0;
   //console.log(q.getMonth());
