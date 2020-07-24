@@ -157,7 +157,7 @@ onWeatherClickedRedux = () => {
 
 
 
-<Router/>
+
 
 
 
