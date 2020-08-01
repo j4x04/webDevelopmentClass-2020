@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import '../App.css';
+import RootContext from '../RootContext'
+
 
 
 const PageA = (props) => {
-    //const [name, setName] = useState("1");
     const [count, plusOne] = useState(0);
-    
     useEffect(() => {
         document.title = `${count}`;
     });
@@ -17,6 +17,6 @@ const PageA = (props) => {
         </div>
     )
 }
-
+ 
 
 export default PageA;

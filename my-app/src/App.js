@@ -8,9 +8,10 @@ import { connect } from 'react-redux';
 import weatherApi from "./api/weatherApi"
 import { sampleReducer } from './reducers/SampleReducer.js'
 import Router from './router'
+import {RootProvider}from './RootContext';
 
 
-// AGE AUTO UPDATE
+// AGE AUTO UPDATE, move to component soon
 let counter = 0; 
 let ageString = "";
 function agecalculations() {
@@ -26,12 +27,15 @@ function agecalculations() {
 
 
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       weather: null,
       quote: null,
+      name: []
     }
   }
 
@@ -145,23 +149,28 @@ onWeatherClickedRedux = () => {
 
   */
 
+
+setName = (name) => {
+  this.setState((prevState) => ({name}))
+}
+
+
+
   render() {
     const {weather, quote} = this.state;
     const { sampleState } = this.props.counterVal;
+
+
+
+    const {name} = this.state;
+    const {setName} = this;
+
     return ( 
       <div className="App">
         
 
-
-<header>
-
-
-
-<Router/>
-
-
-
-  </header>
+        
+        
 
         <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet"></link>
       
@@ -205,7 +214,7 @@ onWeatherClickedRedux = () => {
       <div>Your random quote is: {quote}</div>
       <div onClick ={() => this.getQuote()}>click to get quote :p </div>
 
-
+      <Router/>
 
 
 
@@ -219,6 +228,7 @@ onWeatherClickedRedux = () => {
 
 
 
+      
       </div>
     );
   }

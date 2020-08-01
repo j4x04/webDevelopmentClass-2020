@@ -1,17 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import '../App.css';
+import RootContext from '../RootContext'
+import UserContext from '../App'
 
 
-const PageB = (props) => {
-    const [name, setName] = useState("a");
+class PageB extends React.Component {
+    
+    //const [name, setName] = useState("a");
+
+render() {
+    
 
     return (
-        <div>
-            {name}
-            <div onClick = {()=> setName(name + 'a')}>Click Here to add 'a' to the end</div>
-        </div>
-    )
+        <div>Page B!</div>
+    );
 }
+} 
 
 
 export default PageB;
